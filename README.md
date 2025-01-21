@@ -1,3 +1,25 @@
+# Guide
+
+This repository is modified by c7w based on mmcv-full 1.7.1 to make it able to install with torch >=2.
+
+To install mmcv 1.7.1:
+```
+MAX_JOBS=16 pip install git+https://github.com/c7w/mmcv-full-1.7.1-torch-2.git -vvv
+```
+
+To install mmcv-full 1.7.1 (make sure that your PATH and LD_LIBRARY_PATH env vars include CUDA paths your PyTorch is compiled upon):
+```
+MAX_JOBS=16 MMCV_WITH_OPS=1 pip install git+https://github.com/c7w/mmcv-full-1.7.1-torch-2.git -vvv
+```
+
+After installing this, you can install other mm-family packages as usual, such as:
+```
+pip install openmim
+mim install mmdet==2.28.2
+```
+
+
+# README.md from mmcv-1.7.1
 <div align="center">
   <img src="https://raw.githubusercontent.com/open-mmlab/mmcv/master/docs/en/mmcv-logo.png" width="300"/>
   <div>&nbsp;</div>
